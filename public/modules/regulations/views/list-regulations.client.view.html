@@ -1,0 +1,19 @@
+<section data-ng-controller="RegulationsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Regulations</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="regulation in regulations" data-ng-href="#!/regulations/{{regulation._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="regulation.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="regulation.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="regulation.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!regulations.$resolved || regulations.length">
+    	No Regulations yet, why don't you <a href="/#!/regulations/create">create one</a>?
+    </div>
+</section>
