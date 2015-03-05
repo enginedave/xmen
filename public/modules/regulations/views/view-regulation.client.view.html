@@ -1,6 +1,10 @@
 <section data-ng-controller="RegulationsController" data-ng-init="findOne()">
 	<div class="page-header">
-		<h1 data-ng-bind="regulation.name"></h1>
+		<h1 data-ng-bind="regulation.title"></h1>
+		<h3 data-ng-bind="regulation.section"></h3>
+		<h3 data-ng-bind="regulation.number"></h3>
+		<!-- concat the style string to the stuff retreived from the database to remove the bullets from the lists. Also add to the css file to change the background -->
+		<div data-ng-bind-html="regulation.regText"></div>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == regulation.user._id))">
 		<a class="btn btn-primary" href="/#!/regulations/{{regulation._id}}/edit">

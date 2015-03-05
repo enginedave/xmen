@@ -9,7 +9,10 @@ angular.module('regulations').controller('RegulationsController', ['$scope', '$s
 		$scope.create = function() {
 			// Create new Regulation object
 			var regulation = new Regulations ({
-				name: this.name
+				title: this.title,
+				section: this.section,
+				number: this.number,
+				regText: this.regText
 			});
 
 			// Redirect after save

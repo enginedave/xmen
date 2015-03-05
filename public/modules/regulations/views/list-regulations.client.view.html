@@ -4,13 +4,14 @@
     </div>
     <div class="list-group">
         <a data-ng-repeat="regulation in regulations" data-ng-href="#!/regulations/{{regulation._id}}" class="list-group-item">
+            <h4 class="list-group-item-heading"><span data-ng-bind="regulation.number"></span> <span data-ng-bind="regulation.title"></span></h4>
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="regulation.created | date:'medium'"></span>
 				by
 				<span data-ng-bind="regulation.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="regulation.name"></h4>
+			
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!regulations.$resolved || regulations.length">

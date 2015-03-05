@@ -7,33 +7,56 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Regulation Schema
+ * Customer Schema
  */
-var RegulationSchema = new Schema({
-	title: {
+var CustomerSchema = new Schema({
+	firstName: {
 		type: String,
 		default: '',
-		required: 'Please complete the Regulation title',
 		trim: true
 	},
-	section: {
+	surname: {
 		type: String,
 		default: '',
-		required: 'Please complete the Regulation section',
 		trim: true
 	},
-	number: {
+	suburb: {
 		type: String,
 		default: '',
-		required: 'Please complete the Regulation number',
 		trim: true
 	},
-	regText: {
+	country: {
 		type: String,
 		default: '',
-		required: 'Please complete the Regulation text',
 		trim: true
 	},
+	industry: {
+		type: String,
+		default: '',
+		trim: true
+	},
+	email: {
+		type: String,
+		default: '',
+		trim: true
+	},
+	phone: {
+		type: String,
+		default: '',
+		trim: true
+	},
+	referred: {
+		type: Boolean
+	},
+	channel: {
+		type: String,
+		default: '',
+		trim: true
+	},
+
+
+
+
 
 
 	created: {
@@ -46,4 +69,4 @@ var RegulationSchema = new Schema({
 	}
 });
 
-mongoose.model('Regulation', RegulationSchema);
+mongoose.model('Customer', CustomerSchema);
