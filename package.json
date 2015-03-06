@@ -8,9 +8,9 @@
 		"npm": "1.4.x"
 	},
 	"scripts": {
-		"start": "grunt",
-		"test": "grunt test",
-		"postinstall": "bower install --config.interactive=false"
+	    "start": "node node_modules/grunt-cli/bin/grunt",
+	    "test": "node node_modules/grunt-cli/bin/grunt test",
+	    "postinstall": "HOME=$HOME/app-root/runtime node node_modules/bower/bin/bower install"
 	},
 	"dependencies": {
 		"express": "~4.10.1",
