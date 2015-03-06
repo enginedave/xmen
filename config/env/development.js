@@ -3,6 +3,7 @@
 module.exports = {
 	//db: 'mongodb://localhost/xmen-dev',
 	db: 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' + process.env.OPENSHIFT_MONGODB_DB_HOST + ':' + process.env.OPENSHIFT_MONGODB_DB_PORT + '/' + process.env.OPENSHIFT_APP_NAME,
+	hostname: process.env.OPENSHIFT_NODEJS_IP,
 	app: {
 		title: 'Xmen - Development Environment'
 	},
