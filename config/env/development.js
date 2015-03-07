@@ -1,7 +1,8 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/xmen-dev',
+	//db: 'mongodb://localhost/xmen-dev',
+	db: 'mongodb://enginedave:dave4368@ds053539.mongolab.com:53539/dgdb',
 	//db: 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' + process.env.OPENSHIFT_MONGODB_DB_HOST + ':' + process.env.OPENSHIFT_MONGODB_DB_PORT + '/' + process.env.OPENSHIFT_APP_NAME,
 	//hostname: process.env.OPENSHIFT_NODEJS_IP,
 	app: {
